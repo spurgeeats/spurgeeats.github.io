@@ -1,0 +1,396 @@
+/* MAIN-RESPONSIVE.CSS contains Mobile Specific rules powered by Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries 
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it 
+there. 
+*/
+
+
+
+/* Larger Laptops and Screens */
+@media (max-width: 1360px) {
+    .container {
+        max-width: 1260px;
+    }
+}
+
+
+
+/* Laptop */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1100px;
+    }
+}
+
+
+
+/* Medium Desktops */
+@media (max-width: 1100px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+
+/* Small Desktops */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 924px;
+    }
+}
+
+
+/* Other Larger Mobile Devices */
+@media (max-width: 992px) {
+    .container {
+        max-width: 892px;
+    }
+    .text-left, .text-right, .mastfoot, .credits, .services-item {
+        text-align: left;
+    }
+
+    .img-responsive {
+        display: inline-block;
+        padding-top: 1em;
+    }
+    .pad-top-quarter{
+        padding-top: 2em;
+    }
+    section.mastwrap{
+      border: 60px solid;
+      border-top: 60px solid;
+      border-bottom: 0;
+    }
+/*    header.masthead, .menu-trigger-wrap{
+        display: none;
+    }
+    .mobile-nav {
+        display: block;
+    }*/
+/*    header.masthead{
+        padding: 0px 50px;
+    }*/
+    .header-highlighted{
+        padding: 0px 50px !important;
+    }
+    .masthead .text-left{
+    	text-align: left !important;
+    }
+    .masthead .text-right{
+    	text-align: right !important;
+    }
+    .menu-panel ul li a.main-link {
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 48px;
+	}
+	.sub-menu a {
+	    font-size: 14px;
+	    line-height: 21px;
+	}
+    footer.mastfoot {
+        height: 50px;
+    }
+    /* footer .credits{
+        -webkit-transform:none;
+        -moz-transform:none;
+        -o-transform:none;
+        -ms-transform:none;
+        transform:none;
+        bottom: auto;
+        right: auto;
+        text-align: center;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .foot-social{
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .foot-social li{
+        display: inline-block;
+    } */
+	.works-masonry-container .works-item-one-third,
+	.works-masonry-container .works-item-two-third,
+	.works-masonry-container .works-item-one-half,
+	.works-masonry-container .works-item-one-fourth,
+	.works-masonry-container .works-item-full-width,
+	.works-masonry-container .works-item-one-third-spaced,
+	.works-masonry-container .works-item-one-half-spaced,
+	.works-masonry-container .works-item-two-third-spaced,
+	.works-masonry-container .works-item-one-fourth-spaced{
+	  margin: 0% !important;
+	  padding: 1.5em !important;
+	}
+    .projectpage .works-masonry-container .works-item-one-third,
+    .projectpage .works-masonry-container .works-item-two-third,
+    .projectpage .works-masonry-container .works-item-one-half,
+    .projectpage .works-masonry-container .works-item-one-fourth,
+    .projectpage .works-masonry-container .works-item-full-width, 
+    .projectpage .works-masonry-container .works-item-one-third-spaced,
+    .projectpage .works-masonry-container .works-item-one-half-spaced,
+    .projectpage .works-masonry-container .works-item-two-third-spaced,
+    .projectpage .works-masonry-container .works-item-one-fourth-spaced {
+        margin: 0%;
+        padding: 0em !important;
+        width: 100% !important;
+    }
+	.works-item-inner {
+	    padding: 0 40px;
+	    text-align: left;
+	}
+    div#preloader {
+        width: 100% !important;
+        height: 100%;
+        left: 0px;
+        position: fixed;
+        top: 120px;
+        margin-right: 0px;
+    }
+    .elements-counter{
+        display: block;
+        width: 100%;
+        padding-bottom: 35px;
+    }
+    .leanright {
+    position: relative !important;
+    max-height: 100%;
+    left: auto !important;
+    right: auto !important;
+    transform: inherit !important;
+    max-width: 75vw;
+    margin-bottom: 25px;
+    z-index: 1;
+    }
+    #hidden-images {
+        display: none;
+    }
+    .about.bigletters, .seealso.bigletters {
+        font-size: 40px;
+    }
+    .img-responsive {
+    max-width: 100vw;
+    }
+}
+
+
+
+/* MINIMUM - Larger than tablet 
+@media (min-width: 992px) {
+    .workpage {
+   margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+    }
+}
+
+/* MINIMUM - Larger than tablet 
+@media (max-width: 991px) {
+        .workpage {
+   padding-left: 15px;
+   padding-right: 15px;
+  position: relative;
+    }
+}
+*/
+
+/* Larger than tablet */
+@media (max-width: 800px) {
+    .container {
+        width: 700px;
+    }
+    section.mastwrap{
+      border: 50px solid;
+      border-bottom: 0;
+    }
+    .menu.menu--tsula {
+        text-align: left;
+    }
+    #hidden-text .newhomephrase {
+        font-size: 60px;
+    }
+
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .container {
+        width: 668px;
+    }
+/*    .newborder {
+    border-left: 20px solid #1b1a1a !important;
+    border-right: 20px solid #1b1a1a !important;
+}*/
+
+}
+
+/*iPhone 6Plus Landscape Mode*/
+@media screen and (max-width: 736px) {
+    .container {
+        width: 636px;
+        padding-top: 20px;
+    }
+        .extrapadding {
+        /* padding-left: 0.5em;
+        padding-right: 0.5em; */
+        padding-top: 4em;
+    }
+}
+
+
+/*iPhone 6 Landscape Mode*/
+@media screen and (max-width: 667px) {
+    .container {
+        width: 567px;
+        padding-top: 20px;
+
+    }
+/*.newborder {
+    border-left-width: 10px;
+    border-right-width: 10px;
+}*/
+
+}
+
+
+/*Google Nexus and Other Large Smart Phones*/
+@media screen and (max-width: 600px) {
+    .container {
+        width: 500px;
+        padding-top: 20px;
+
+    }
+    .centered {
+    max-width: 80vw;
+    }
+    .homephraseleft {
+        top: 7%;
+        left: 5%;
+        font-size: 40px;
+    }
+    .homephraseright {
+        bottom: 13%;
+        right: 7%;
+        font-size: 40px;
+    }
+
+
+    header div div div div.col-md-12 {
+        padding-left: 0;
+    }
+    .newborder, .headerborder, .footerborder {
+        border-top: 0px;
+        border-bottom: 0px;
+        border-left: 0px;
+        border-right: 0px;
+    }
+}
+
+/*iPhone Landscape Mode and Medium Smart Phones*/
+@media screen and (max-width: 480px) {
+    .container {
+        width: 400px;
+        padding-top: 20px;
+
+    }
+    section.mastwrap{
+      border: 40px solid;
+      border-top: 80px solid;
+      border-bottom: 0;
+    }
+    div#preloader {
+        top: 80px;
+    }
+     header.masthead{
+        font-size: 17px;
+    }
+    .header-highlighted{
+        padding: 0px 40px !important;
+    }
+    header.masthead .masthead-half-left, header.masthead .masthead-half-right{
+        height: 80px;
+    }
+	.works-masonry-container .works-item-one-third,
+	.works-masonry-container .works-item-two-third,
+	.works-masonry-container .works-item-one-half,
+	.works-masonry-container .works-item-one-fourth,
+	.works-masonry-container .works-item-full-width,
+	.works-masonry-container .works-item-one-third-spaced,
+	.works-masonry-container .works-item-one-half-spaced,
+	.works-masonry-container .works-item-two-third-spaced,
+	.works-masonry-container .works-item-one-fourth-spaced{
+	  margin: 0% !important;
+	  padding: 1.4em !important;
+	}
+	.works-item-inner {
+	    padding: 0 40px;
+	    text-align: left;
+	}
+/*    .menu-trigger p{
+    	display: none;
+    }
+    .welcome-text h1, .elements-counter .number, .news-post h1{
+        font-size: 24px !important;
+        line-height: 31px !important;
+    }
+    .agency-home-caption, .welcome-text h2, .news-post h2{
+        font-size: 20px !important;
+        line-height: 27px !important;
+    } */
+    .about.bigletters {
+        font-size: 26px;
+    }
+}
+
+
+
+
+
+/*iPhone 6Plus Portrait Mode*/
+@media screen and (max-width: 414px) {
+    .container {
+        width: 374px;
+        padding-left: 10px;
+        padding-top: 20px;
+    }
+    section.mastwrap{
+      border: 20px solid;
+      border-bottom: 0;
+    }
+/*.newborder {
+    border-left-width: 4px;
+    border-right-width: 4px;
+}*/
+
+}
+
+/*iPhone 6 Portrait Mode*/
+@media screen and (max-width: 375px) {
+    .container {
+        width: 335px;
+        padding-left: 10px;
+        padding-top: 20px;
+
+    }
+}
+
+/*iPhone 5S, 5, 4S & 4 Portrait Mode and Very Small Mobile Phones*/
+@media screen and (max-width: 320px) {
+    .container {
+        width: 280px;
+        padding-left: 10px;
+        padding-top: 20px;
+
+    }
+}
+
+
+
+
+
+

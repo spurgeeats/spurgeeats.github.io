@@ -1,0 +1,94 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+/* Fade effect */
+.js body {
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.js body.render {
+	opacity: 1;
+}
+
+
+a:hover,
+a:focus {
+	outline: none;
+}
+
+
+/* Common styles for the menus */
+.menu {
+	z-index: 10;
+}
+
+.menu__item {
+	position: relative;
+	display: block;
+	margin: 1em 0;
+	outline: none;
+}
+
+.menu__item-name,
+.menu__item-label {
+	position: relative;
+	display: inline-block;
+}
+
+.menu__item-label {
+	margin: 0 0 0 0em;
+}
+
+
+@media screen and (max-width: 50em) {
+	html,
+	body {
+		overflow-x: hidden;
+		width: 100vw;
+		height: 100%;
+	}
+	.content {
+		height: auto;
+		min-height: 0;
+	/* padding-bottom: 10em; */
+	}
+}
+
+.menu--tsula .menu__item-name {
+    cursor: url("../images/view.png") 40 40, crosshair;
+}
+
+.menu--tsula .menu__item-label {
+	cursor: url("../images/view.png") 40 40, crosshair; 
+}
+
+/* Code for blinking blue square */
+.menu--tsula .menu__item .menu__item-name::before {
+	/* content: '';
+	position: absolute;
+	top: 0;
+	right: 100%;
+	width: 0.9em;
+	height: 1em;
+	opacity: 0;
+	/* background: rgba(90,91,211,0.7); */
+	/* animation: none; /* For Chrome */ 
+}
+
+/* .menu--tsula .menu__item .menu__item-name:hover::before,
+.menu--tsula .menu__item .menu__item-name:focus::before {
+	animation: blinkblink 0.4s cubic-bezier(0.5,0,1,1) infinite alternate;
+}
+
+@keyframes blinkblink {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+} */
