@@ -424,13 +424,12 @@ section.mastwrap{
 } 
 
 .works-filter-panel{
-  height: 50px;
+  height: 100px;
   display: block;
   width: 100%;  
   z-index: 9990;
   position: absolute;
-top: 0;  
-left: 8%;}
+}
 
 .works-container div:nth-child(2) {
   height: 50px;
