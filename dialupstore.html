@@ -119,11 +119,65 @@
 
 <!-- MASTER CONTENT
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+          <!--FILTERS -->
+        <section id="works-filter-panel" class="works-filter-panel imgborder">
+          <div class="valign">
+                <div class="works-filter-wrap">
+                    <ul class="works-filter text-center clearfix font2">
+
+                        <li><a id="all" href="#" data-filter="*" class="active"><span>All</span></a></li>
+
+                        <li><a href="#" data-filter=".product"><span class="green">Product</span></a></li>
+                        <!--GREEN -->
+
+                        <li><a href="#" data-filter=".ui"><span class="blinkblue">Interface</span></a></li>
+                        <!--BLUE -->
+
+                        <li><a href="#" data-filter=".space"><span class="red">Space</span></a></li>
+                        <!--RED -->
+
+                        <li><a href="#" data-filter=".service"><span class="orange">Service</span></a></li>
+                        <!--ORANGE -->
+
+                    </ul>
+                </div>
+          </div>
+        </section> 
+        <!-- -->
+
+<section>
+  <div id="hidden-images">
+    <img onmouseover="hideElement('bloom')" hidden id="bloom" alt="" class="b-lazy leanright imgshadow supercede" src="images/imgloader.gif" data-src="images/work/bloom.jpeg" data-src-small="images/about_sm.jpg"/>
+
+    <img onmouseover="hideElement('cuttingmat')" hidden id="cuttingmat" alt="empty cutting mat" class="b-lazy leanright supercede" src="images/imgloader.gif" data-src="images/work/cuttingmat.png" data-src-small="images/about_sm.jpg"/>
+
+    <img onmouseover="hideElement('jpb')" hidden id="jpb" alt="" class="b-lazy leanright supercede" src="images/imgloader.gif" data-src="images/work/johnsonpublishing.png" data-src-small="images/about_sm.jpg"/>
+
+    <img onmouseover="hideElement('tenderheaded')" hidden id="tenderheaded" alt="" class="b-lazy leanright imgshadow supercede" src="images/imgloader.gif" data-src="images/work/tenderheaded.jpeg" data-src-small="images/about_sm.jpg"/>
+    
+    <img onmouseover="hideElement('photos')" hidden id="photos" alt="" class="b-lazy leanright imgshadow supercede" src="images/imgloader.gif" data-src="images/work/photojournal.jpeg" data-src-small="images/about_sm.jpg"/>
+    
+    <img onmouseover="hideElement('busstop')" hidden id="busstop" alt="" class="b-lazy leanright imgshadow supercede" src="images/imgloader.gif" data-src="images/work/busstop.jpg" data-src-small="images/about_sm.jpg"/>
+    
+    <img onmouseover="hideElement('lighthouse')" hidden id="lighthouse" alt="" class="b-lazy leanright imgshadow supercede" src="images/imgloader.gif" data-src="images/work/bushwicklighthouse.jpeg" data-src-small="images/about_sm.jpg"/>
+    
+    <img onmouseover="hideElement('august')" hidden id="august" alt="" class="b-lazy leanright imgshadow supercede" src="images/imgloader.gif" data-src="images/work/august.jpeg" data-src-small="images/about_sm.jpg"/>
+    
+    <img onmouseover="hideElement('ficareto')" hidden id="ficareto" alt="" class="b-lazy leanright imgshadow supercede" src="images/imgloader.gif" data-src="images/work/ficareto.jpeg" data-src-small="images/about_sm.jpg"/>
+    
+    <img onmouseover="hideElement('store')" hidden id="store" alt="" class="b-lazy leanright supercede" src="images/imgloader.gif" data-src="images/work/dialupstore.png" data-src-small="images/about_sm.jpg"/>
+
+
+  </div>
+</section>  
+
+
 <section>
   <div class="projectpage">          
     <div class="newborder container">
       <section id="works-container" class="works-container works-masonry-container clearfix works-thumbnails-view pad-top-quarter">
-
 
 
 <!-- IMG : works-item -->
@@ -147,8 +201,9 @@
               </div>
 <!-- end : works-item -->
 
+
 <!-- TEXT : works-item -->
-              <div class="works-item chrome-fix works-item-full-width">
+              <div onmouseover="showElement('bloom')" onmouseout="hideElement('bloom')" class="works-item chrome-fix works-item-full-width">
                         <article class="text-left  worktext">
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id porta nibh venenatis. Adipiscing tristique risus nec feugiat in. Habitant morbi tristique senectus et netus. Lacinia quis vel eros donec ac odio. Purus ut faucibus pulvinar elementum integer enim neque. Tortor condimentum lacinia quis vel eros donec ac odio. Amet purus gravida quis blandit turpis cursus in. Praesent elementum facilisis leo vel fringilla. <a href="http://www.dialupstuff.com/blah" target="_blank">Visit the store.</a> Fames ac turpis egestas integer eget aliquet nibh. Non enim praesent elementum facilisis leo. Volutpat blandit aliquam etiam erat. Ac tortor dignissim convallis aenean et tortor.</p>
                     </article>
@@ -326,6 +381,53 @@
   <script src="javascripts/custom/elements.js"></script>
 
 <script src="javascripts/custom/main.js"></script>
+
+<script type="text/javascript">
+    imagehere = true;
+
+    function showElement(id) {
+      if (imagehere) {
+      document.getElementById(id).removeAttribute("hidden");
+    }
+    }
+
+    function hideElement(id) {
+      if (imagehere) {
+      document.getElementById(id).setAttribute("hidden", true);
+    }
+    }
+
+    function mobileImages() {
+      console.log(0);
+      console.log(window.matchMedia("(max-width: 992px)").matches);
+      if (window.matchMedia("(max-width: 992px)").matches) {
+        console.log(1);
+        imagehere = false;
+        var imgst = document.getElementById('hidden-images').children;
+        for (var i = 0; i < imgst.length; i++) {
+           imgst[i].setAttribute("src","about:blank"); //second console output
+        }
+
+        // setAttribute('src','about:blank');
+      }
+    }
+
+window.onload = function () {
+      var bLazy = new Blazy({
+        loadInvisible: true,
+        container: '#hidden-images',
+        error: function (ele, msg) {
+          console.log(ele);
+          console.log(msg);
+        },
+        breakpoints: [{
+                    width: 993 // max-width
+            , src: 'data-src-small'
+               }]
+      });
+      console.log(bLazy);
+    }
+  </script>
 
 </body>
 </html>
