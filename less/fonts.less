@@ -1,18 +1,20 @@
 
-@font1:'VVSNobleman-Display', serif;
-@font2: 'prestige-elite-std', monospace;
+@font1: 'baroque-text-jf', sans-serif;
+@font2: 'novel-mono-pro', sans-serif;
 
 
 
 .font1{
-	font-family: @font1;
+	font-family:@font1;
+	font-style: normal;	
 	font-weight: 400;
+	text-transform: lowercase;
 }
 
 .font2{
 	font-family: @font2;
-	font-weight: 800;
-	font-style: normal;
+	font-weight: 300;
+	font-style: italic;
 }
 
 .font1semibold {
@@ -35,7 +37,6 @@
 
 .indexfont {
 	font-family: @font1;
-	text-transform: uppercase;
 }
 
 body, p{
@@ -44,11 +45,12 @@ body, p{
 
 nav a, header a {
 	font-family: @font1;
-	text-transform: uppercase;
+	text-transform: lowercase;
 }
 
 .menu-panel ul li a{
 	font-family: @font2;
+	text-transform: uppercase;
 }
 
 .btn-remark {
