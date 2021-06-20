@@ -19,7 +19,7 @@
 
 
 /* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/3d4e36");
+/* @import url("//hello.myfonts.net/count/3d4e36");
   
 @font-face {
   font-family: 'VVSNobleman-Display';
@@ -31,4 +31,4 @@
        url('/fonts/nobleman/VVSNobleman-Display.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
-}
+} */

@@ -1,6 +1,7 @@
 
 @font1: 'baroque-text-jf', sans-serif;
 @font2: 'novel-mono-pro', sans-serif;
+@font3: 'Libre Barcode 128 Text', cursive;
 
 
 
@@ -15,6 +16,10 @@
 	font-family: @font2;
 	font-weight: 300;
 	font-style: italic;
+}
+
+.font3 {
+	font-family: @font3;
 }
 
 .font1semibold {
@@ -41,6 +46,8 @@
 
 body, p{
 	font-family: @font2;
+	font-weight: 300;
+	font-style: italic;
 }
 
 nav a, header a {
@@ -49,8 +56,8 @@ nav a, header a {
 }
 
 .menu-panel ul li a{
-	font-family: @font2;
-	text-transform: uppercase;
+	font-family: @font3;
+	text-transform: lowercase;
 }
 
 .btn-remark {
