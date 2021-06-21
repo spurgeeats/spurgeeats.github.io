@@ -133,9 +133,9 @@ body {
 .greygrd {
   background: #FFFDFC;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #FFFDFC, #cccccc);
+  background: -webkit-linear-gradient(to top, #FFFDFC, #cccccc);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #FFFDFC, #cccccc);
+  background: linear-gradient(to top, #FFFDFC, #cccccc);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   z-index: 0;
   width: 100vw;
@@ -180,24 +180,17 @@ header.masthead.hint-bg {
   background-color: rgba(255, 253, 252, 0.8);
 }
 /* TEXT COLORS */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+p,h1,h2,h3,h4,h5,h6, a {
   color: #402615;
 }
-a {
-  color: #0e34c3;
+a, a:focus, a:hover {
   cursor: url("../images/view.png") 40 40, crosshair;
 }
 a:hover {
-  color: #402615;
-  text-decoration: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: #402615;
+  color: #1ecc0a;
+  text-decoration:none;
+  /*text-decoration-style: wavy;
+  text-decoration-color: #402615;*/
 }
 header a.active {
   color: #402615;
@@ -207,17 +200,17 @@ header a {
   color: #402615;
 }
 header a:hover {
-  color: #402615;
-  text-decoration: underline;
-  /*text-decoration-style: wavy;*/
-  text-decoration-color: #402615;
+  color: #1ecc0a;
+  'text-decoration:none;
+  /*text-decoration-style: wavy;
+  text-decoration-color: #402615;*/
 }
 .backtowork a:hover {
-  color: #402615;
+  color: #1ecc0a;
 }
 .seealso a:hover {
   text-decoration: none;
-  color: #402615;
+  color: #1ecc0a;
 }
 /* SELECTION COLORS */
 ::selection {
@@ -245,10 +238,10 @@ header a:hover {
   /* background-color: rgba(255, 255, 255, 0.3); */
 }
 .works-item a:hover {
-  color: #402615;
-  text-decoration: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: #402615;
+  color: #1ecc0a;
+  text-decoration: none;
+  /*text-decoration-style: wavy;
+  text-decoration-color: #402615;*/
 }
 /* TSULA COLORS*/
 .menu--tsula .menu__item .menu__item-name::before {

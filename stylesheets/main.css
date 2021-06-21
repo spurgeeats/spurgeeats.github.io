@@ -22,7 +22,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 body{
   overscroll-behavior: none;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 p, .aboutmenu{
@@ -52,7 +52,7 @@ h1{
   font-size: 16px;
 } */
 
-a:focus { 
+a, a:focus, a:hover { 
       outline: none; 
 }
 @media (min-width: 1024px) and (max-width: 5000px) {
@@ -61,6 +61,7 @@ a:focus {
     width: 95%;
   }
 }
+
 /*Preloader*/
 html.preloader-running, body.preloader-running {
     overflow: hidden;
@@ -152,6 +153,10 @@ footer.mastfoot{
 }
 .credits{
   margin-top: 10px;
+}
+
+.container-footer {
+  padding-bottom: 50px;
 }
 
 /*
@@ -432,7 +437,7 @@ section.mastwrap{
   width: 100%;  
   z-index: 9990;
   position: absolute;
-  margin-top: -55px;
+  margin-top: -78px;
 }
 
 .works-container div:nth-child(2) {
@@ -460,7 +465,7 @@ section.mastwrap{
 .works-container{
     padding: 0;
     overflow: hidden;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
     margin: 1.3em 0em 2.8em 0em;
 }
 
@@ -958,4 +963,39 @@ header div div div div a img {
 
 .supercede {
   z-index: 999;
+}
+
+.menurules {
+  display: block;
+  text-align: center;
+}
+
+.menurules a img {
+  max-width: 60px;
+}
+
+.grow { transition: transform .2s ease-in-out; }
+
+.grow:hover { transform: scale(1.1); }
+
+#plate {
+  background-image: url(images/plate.png);
+  display: block;
+  margin: 0 auto;
+}
+
+#notebook {
+  background-image: url(images/notebook.png);
+  display: block;
+  margin: 0 auto;
+}
+
+#thought {
+  background-image: url(images/thought.png);
+  display: block;
+  margin: 0 auto;
+}
+
+.menutitle {
+  font-size: 30px;
 }
