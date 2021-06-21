@@ -437,7 +437,7 @@ section.mastwrap{
   width: 100%;  
   z-index: 9990;
   position: absolute;
-  margin-top: -50px;
+  margin-top: -80px;
 }
 
 .works-container div:nth-child(2) {
@@ -994,4 +994,12 @@ header div div div div a img {
   background-image: url(images/thought.png);
   display: block;
   margin: 0 auto;
+}
+
+.marblegrd {
+  background-image: url('images/marble.jpg');
+}
+
+.papergrd {
+  background-image: url('images/paper.jpg');
 }
