@@ -979,27 +979,31 @@ header div div div div a img {
 .grow:hover { transform: scale(1.1); }
 
 #plate {
-  background-image: url(images/plate.png);
+  background-image: url('/images/plate.png');
   display: block;
   margin: 0 auto;
 }
 
 #notebook {
-  background-image: url(images/notebook.png);
+  background-image: url('/images/notebook.png');
   display: block;
   margin: 0 auto;
 }
 
 #thought {
-  background-image: url(images/thought.png);
+  background-image: url('/images/thought.png');
   display: block;
   margin: 0 auto;
 }
 
-.marblegrd {
-  background-image: url('images/marble.jpg');
+.marbletexture:before {
+  background-image: url('/images/marble.jpg');
+  content: "";
+      background-size: cover;
+      position: absolute;
+      opacity: 0.75;
 }
 
-.papergrd {
-  background-image: url('images/paper.jpg');
+.papertexture {
+  background-image: url('/images/paper.jpg');
 }
