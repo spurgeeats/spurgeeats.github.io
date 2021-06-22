@@ -151,6 +151,7 @@
       xmlhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
               var myObj = JSON.parse(this.responseText);
+              console.log(myObj);
               myFunction(myObj);
           }
       };
@@ -162,7 +163,14 @@
           var i;
           for(i = 0; i < arr.contents.length; i++) {
             if (arr.contents[i].image){
-              out += '<div class="col-4"><img src="' + arr.contents[i].image.original.url + '"></img></div>';
+              if(arr.contents[i].attachment) {
+                out += '<div class="col-4"><a href=' + arr.contents[i].attachment.url + '><img src="' + arr.contents[i].image.original.url + '"></img></a></div>';
+              }
+              else if(arr.contents[i].source) {
+                out += '<div class="col-4"><a href=' + arr.contents[i].source.url + '><img src="' + arr.contents[i].image.original.url + '"></img></a></div>';
+              } else {
+                out += '<div class="col-4"><a href=' + arr.contents[i].image.original.url + '><img src="' + arr.contents[i].image.original.url + '"></img></a></div>';
+              }
             }
           }
           document.getElementById("arena-container").innerHTML = out;
