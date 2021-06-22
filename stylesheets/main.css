@@ -996,14 +996,22 @@ header div div div div a img {
   margin: 0 auto;
 }
 
-.marbletexture:before {
+body.marbletexture {
   background-image: url('/images/marble.jpg');
-  content: "";
-      background-size: cover;
-      position: absolute;
-      opacity: 0.75;
 }
 
 .papertexture {
   background-image: url('/images/paper.jpg');
 }
+
+img.bwhover {
+      filter: gray; /* IE5+ */
+      -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+      -webkit-transition: all .3s ease-in-out;  
+    }
+
+img.bwhover:hover {
+    filter: none;
+      -webkit-filter: grayscale(0);
+      -webkit-transform: scale(1.01);
+    }
