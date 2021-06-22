@@ -81,12 +81,30 @@
         <div class="valign">
         <div class="container-fluid"> 
             <div class="row menurules pad-top">
-                <a href="index.html" class="text-left menupad menuimg grow"><img src="images/plate.png"></a>
-                <a href="more.html" class="text-center menupad menuimg grow"><img src="images/notebook.png"></a>
-                <a href="about.html" class="text-right menupad menuimg grow"><img src="images/thought.png"></a>
+                <a href="index.html" class="text-left menupad menuimg"><img class="grow" src="images/plate.png"></a>
+                <a href="more.html" class="text-center menupad menuimg"><img class="grow" src="images/notebook.png"></a>
+                <a href="about.html" class="text-right menupad menuimg"><img class="grow" src="images/thought.png"></a>
             </div>                
         </div>
     </div>
+
+                   <!--FILTERS -->
+        <section id="works-filter-panel" class="works-filter-panel">
+          <div class="valign">
+                <div class="works-filter-wrap">
+                    <ul class="works-filter text-center clearfix font2">
+
+                        <li><a id="all" href="#" data-filter="*" class="active"><span>all</span></a></li>
+                        <li><a href="#" data-filter=".beans"><span>beans</span></a></li>
+                        <li><a href="#" data-filter=".greens"><span>greens</span></a></li>
+                        <li><a href="#" data-filter=".fish"><span>fish</span></a></li>
+                        <li><a href="#" data-filter=".meat"><span>meat</span></a></li>
+
+                    </ul>
+                </div>
+          </div>
+        </section> 
+        <!-- -->
 
   </header>
 
@@ -122,23 +140,23 @@
   <div id="hidden-images">
     <img onmouseover="hideElement('bloom')" hidden id="bloom" alt="" class="b-lazy leanright imgshadow supercede" src="images/funnyface.gif" data-src="images/work/bloom.jpeg" data-src-small="images/about_sm.jpg"/>
 
-    <img onmouseover="hideElement('cuttingmat')" hidden id="cuttingmat" alt="empty cutting mat" class="b-lazy leanright supercede" src="images/funnyface.gif" data-src="images/work/cuttingmat.png" data-src-small="images/about_sm.jpg"/>
+    <img onmouseover="hideElement('cuttingmat')" hidden id="cuttingmat" alt="empty cutting mat" class="b-lazy leanleft supercede" src="images/funnyface.gif" data-src="images/work/cuttingmat.png" data-src-small="images/about_sm.jpg"/>
 
     <img onmouseover="hideElement('jpb')" hidden id="jpb" alt="" class="b-lazy leanright supercede" src="images/funnyface.gif" data-src="images/work/johnsonpublishing.png" data-src-small="images/about_sm.jpg"/>
 
-    <img onmouseover="hideElement('tenderheaded')" hidden id="tenderheaded" alt="" class="b-lazy leanright imgshadow supercede" src="images/funnyface.gif" data-src="images/work/tenderheaded.jpeg" data-src-small="images/about_sm.jpg"/>
+    <img onmouseover="hideElement('tenderheaded')" hidden id="tenderheaded" alt="" class="b-lazy leanleft imgshadow supercede" src="images/funnyface.gif" data-src="images/work/tenderheaded.jpeg" data-src-small="images/about_sm.jpg"/>
     
     <img onmouseover="hideElement('photos')" hidden id="photos" alt="" class="b-lazy leanright imgshadow supercede" src="images/funnyface.gif" data-src="images/work/photojournal.jpeg" data-src-small="images/about_sm.jpg"/>
     
-    <img onmouseover="hideElement('busstop')" hidden id="busstop" alt="" class="b-lazy leanright imgshadow supercede" src="images/funnyface.gif" data-src="images/work/busstop.jpg" data-src-small="images/about_sm.jpg"/>
+    <img onmouseover="hideElement('busstop')" hidden id="busstop" alt="" class="b-lazy leanleft imgshadow supercede" src="images/funnyface.gif" data-src="images/work/busstop.jpg" data-src-small="images/about_sm.jpg"/>
     
     <img onmouseover="hideElement('lighthouse')" hidden id="lighthouse" alt="" class="b-lazy leanright imgshadow supercede" src="images/funnyface.gif" data-src="images/work/bushwicklighthouse.jpeg" data-src-small="images/about_sm.jpg"/>
     
-    <img onmouseover="hideElement('august')" hidden id="august" alt="" class="b-lazy leanright imgshadow supercede" src="images/funnyface.gif" data-src="images/work/august.jpeg" data-src-small="images/about_sm.jpg"/>
+    <img onmouseover="hideElement('august')" hidden id="august" alt="" class="b-lazy leanleft imgshadow supercede" src="images/funnyface.gif" data-src="images/work/august.jpeg" data-src-small="images/about_sm.jpg"/>
     
     <img onmouseover="hideElement('ficareto')" hidden id="ficareto" alt="" class="b-lazy leanright imgshadow supercede" src="images/funnyface.gif" data-src="images/work/ficareto.jpeg" data-src-small="images/about_sm.jpg"/>
     
-    <img onmouseover="hideElement('store')" hidden id="store" alt="" class="b-lazy leanright supercede" src="images/funnyface.gif" data-src="images/work/dialupstore.png" data-src-small="images/about_sm.jpg"/>
+    <img onmouseover="hideElement('store')" hidden id="store" alt="" class="b-lazy leanleft supercede" src="images/funnyface.gif" data-src="images/work/dialupstore.png" data-src-small="images/about_sm.jpg"/>
 
 
   </div>
@@ -154,7 +172,7 @@
 <!-- TEXT : works-item -->
               <div class="works-item chrome-fix works-item-one-half beans classics">
                     <article class="text-center worktext">
-                          <a href="recipe-x.html" onmouseover="showElement('cuttingmat')" onmouseout="hideElement('cuttingmat')">spinach-ricotta ravioli</a>
+                          <a href="recipe-x.html" onmouseover="showElement('bloom')" onmouseout="hideElement('cuttingmat')">spinach-ricotta ravioli</a>
                     </article>                    
               </div>
 <!-- end : works-item -->
@@ -170,7 +188,7 @@
 <!-- TEXT : works-item -->
               <div class="works-item chrome-fix works-item-one-half">
                     <article class="text-center worktext">
-                          <a href="recipe-x.html" onmouseover="showElement('cuttingmat')" onmouseout="hideElement('cuttingmat')">spinach-ricotta ravioli</a>
+                          <a href="recipe-x.html" onmouseover="showElement('bloom')" onmouseout="hideElement('cuttingmat')">spinach-ricotta ravioli</a>
                     </article>                    
               </div>
 <!-- end : works-item -->
@@ -201,24 +219,7 @@
   <footer class="mastfoot footerborder">
     <div class="valign">
         <div class="container-fluid container-footer"> 
-                   <!--FILTERS -->
-        <section id="works-filter-panel" class="works-filter-panel">
-          <div class="valign">
-                <div class="works-filter-wrap">
-                    <ul class="works-filter text-center clearfix font1">
 
-                        <li><a id="all" href="#" data-filter="*" class="active"><span>All</span></a></li>
-
-                        <li><a href="#" data-filter=".beans"><span>beans</span></a></li>
-                        <li><a href="#" data-filter=".greens"><span>greens</span></a></li>
-                        <li><a href="#" data-filter=".fish"><span>fish</span></a></li>
-                        <li><a href="#" data-filter=".classics"><span>classics</span></a></li>
-
-                    </ul>
-                </div>
-          </div>
-        </section> 
-        <!-- -->
                
             <div class="row text-center">
                 <a href="index.html" class="font3 menutitle">spurge eats</a>

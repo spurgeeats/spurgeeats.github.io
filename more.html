@@ -81,9 +81,9 @@
         <div class="valign">
         <div class="container-fluid"> 
             <div class="row menurules pad-top">
-                <a href="index.html" class="text-left menupad menuimg grow"><img src="images/plate.png"></a>
-                <a href="more.html" class="text-center menupad menuimg grow"><img src="images/notebook.png"></a>
-                <a href="about.html" class="text-right menupad menuimg grow"><img src="images/thought.png"></a>
+                <a href="index.html" class="text-left menupad menuimg"><img class="grow" src="images/plate.png"></a>
+                <a href="more.html" class="text-center menupad menuimg"><img class="grow" src="images/notebook.png"></a>
+                <a href="about.html" class="text-right menupad menuimg"><img class="grow" src="images/thought.png"></a>
             </div>                
         </div>
     </div>
@@ -119,7 +119,7 @@
 
   <section>
   <div class="projectpage">          
-    <div class="newborder container">
+    <div class="newborder">
       <section id="works-container" class="works-container works-masonry-container clearfix works-thumbnails-view pad-top font3">
 
   <div class="row" id="arena-container">
@@ -136,16 +136,18 @@
   <!-- FOOTER
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <footer class="mastfoot footerborder">
-
     <div class="valign">
-        <div class="container-fluid">
-            <div class="row">
-                <h2 class="text-center">spurge eats</h2>
-            </div>    
+        <div class="container-fluid container-footer"> 
+               
+            <div class="row text-center">
+                <a href="index.html" class="font3 menutitle">spurge eats</a>
+            </div>
+  
         </div>
     </div>
 
 </footer>
+
 
 
 
@@ -176,12 +178,12 @@
           for(i = 0; i < arr.contents.length; i++) {
             if (arr.contents[i].image){
               if(arr.contents[i].attachment) {
-                out += '<div class="works-item chrome-fix works-item-one-half text-center"><a target="_blank" href=' + arr.contents[i].attachment.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
+                out += '<div class="works-item chrome-fix works-item-one-third text-center"><a target="_blank" href=' + arr.contents[i].attachment.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
               }
               else if(arr.contents[i].source) {
-                out += '<div class="works-item chrome-fix works-item-one-half text-center"><a target="_blank" href=' + arr.contents[i].source.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
+                out += '<div class="works-item chrome-fix works-item-one-third text-center"><a target="_blank" href=' + arr.contents[i].source.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
               } else {
-                out += '<div class="works-item chrome-fix works-item-one-half text-center"><a target="_blank" href=' + arr.contents[i].image.original.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
+                out += '<div class="works-item chrome-fix works-item-one-third text-center"><a target="_blank" href=' + arr.contents[i].image.original.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
               }
             }
           }

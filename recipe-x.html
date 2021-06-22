@@ -17,7 +17,7 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/sexypasta.png.png" />
+  <link rel="icon" type="image/png" href="images/sexypasta.png" />
 
 
    <!-- FONT
@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 
 <link rel="stylesheet" href="https://use.typekit.net/alw6zrq.css">
-<link rel="stylesheet" href="stylesheets/MyFontsWebfontsKit.css">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.typekit.net/msv1dbc.css">
 
 <!-- ICONS
@@ -52,7 +52,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
 <link rel="stylesheet/less" type="text/css" href="less/color.less">
   <link rel="stylesheet/less" type="text/css" href="less/fonts.less">
-<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
 
 
   <!-- MODERNIZR
@@ -64,7 +64,7 @@
 
 </head>
 
-<body class="greengrd">
+<body class="marbletexture">
 
 
   <!-- Preloader
@@ -78,15 +78,34 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <header class="masthead headerborder">
 
-    <div class="valign">
-        <div class="container-fluid">
-            <div class="row">
-                <a href="index.html" class="text-left menupad">eat me</a>
-                <a href="more.html" class="text-center menupad">add me</a>
-                <a href="about.html" class="text-right menupad">read me</a>
-            </div>   
+        <div class="valign">
+        <div class="container-fluid"> 
+            <div class="row menurules pad-top">
+                <a href="index.html" class="text-left menupad menuimg"><img class="grow" src="images/plate.png"></a>
+                <a href="more.html" class="text-center menupad menuimg"><img class="grow" src="images/notebook.png"></a>
+                <a href="about.html" class="text-right menupad menuimg"><img class="grow" src="images/thought.png"></a>
+            </div>                
         </div>
     </div>
+
+                   <!--FILTERS -->
+        <section id="works-filter-panel" class="works-filter-panel">
+          <div class="valign">
+                <div class="works-filter-wrap">
+                    <ul class="works-filter text-center clearfix font2">
+
+                        <li><a id="all" href="#" data-filter="*" class="active"><span>all</span></a></li>
+                        <li><a href="#" data-filter=".beans"><span>beans</span></a></li>
+                        <li><a href="#" data-filter=".greens"><span>greens</span></a></li>
+                        <li><a href="#" data-filter=".fish"><span>fish</span></a></li>
+                        <li><a href="#" data-filter=".meat"><span>meat</span></a></li>
+
+                    </ul>
+                </div>
+          </div>
+        </section> 
+        <!-- -->
+
   </header>
 
 
@@ -145,7 +164,7 @@
 
 
 <section>
-  <div class="projectpage">          
+  <div class="">          
     <div class="newborder container">
       <section id="works-container" class="works-container works-masonry-container clearfix works-thumbnails-view pad-top-quarter">
 
@@ -236,13 +255,15 @@
   <!-- FOOTER
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <footer class="mastfoot footerborder">
-
     <div class="valign">
-        <div class="container-fluid">
-            <div class="row">
-                <h2 class="text-center">spurge eats</h2>
-            </div>    
-        </div>   
+        <div class="container-fluid container-footer"> 
+
+               
+            <div class="row text-center">
+                <a href="index.html" class="font3 menutitle">spurge eats</a>
+            </div>
+  
+        </div>
     </div>
 
 </footer>

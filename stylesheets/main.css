@@ -437,7 +437,7 @@ section.mastwrap{
   width: 100%;  
   z-index: 9990;
   position: absolute;
-  margin-top: -80px;
+  margin-top: 10%;
 }
 
 .works-container div:nth-child(2) {
@@ -452,8 +452,8 @@ section.mastwrap{
   display: inline-block;
 }
 .works-filter li a{
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 18px;
 }
 .works-filter li:after{
   content: ' ';
@@ -900,6 +900,15 @@ section.mastwrap{
 .leanright {
     position: fixed !important;
     left: 68% !important;
+    top: 45% !important;
+    transform: translate(-50%, -50%) !important;
+    max-width: 650px;
+    z-index: 0;
+}
+
+.leanleft {
+    position: fixed !important;
+    left: 28% !important;
     top: 45% !important;
     transform: translate(-50%, -50%) !important;
     max-width: 650px;
