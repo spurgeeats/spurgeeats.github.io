@@ -178,12 +178,12 @@
           for(i = 0; i < arr.contents.length; i++) {
             if (arr.contents[i].image){
               if(arr.contents[i].attachment) {
-                out += '<div class="works-item chrome-fix works-item-one-third text-center"><a target="_blank" href=' + arr.contents[i].attachment.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
+                out += '<div class="works-item chrome-fix works-item-one-third-spaced text-center"><a target="_blank" href=' + arr.contents[i].attachment.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
               }
               else if(arr.contents[i].source) {
-                out += '<div class="works-item chrome-fix works-item-one-third text-center"><a target="_blank" href=' + arr.contents[i].source.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
+                out += '<div class="works-item chrome-fix works-item-one-third-spaced text-center"><a target="_blank" href=' + arr.contents[i].source.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
               } else {
-                out += '<div class="works-item chrome-fix works-item-one-third text-center"><a target="_blank" href=' + arr.contents[i].image.original.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
+                out += '<div class="works-item chrome-fix works-item-one-third-spaced text-center"><a target="_blank" href=' + arr.contents[i].image.original.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
               }
             }
           }
