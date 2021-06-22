@@ -169,7 +169,8 @@
               myFunction(myObj);
           }
       };
-      xmlhttp.open("GET", baseUrl+channelName, true);
+      xmlhttp.open("GET", baseUrl+channelName, false);
+      xmlhttp.setRequestHeader("Cache-Control", "no-cache, no-store, max-age=0");
       xmlhttp.send();
       
       function myFunction(arr) {
