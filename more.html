@@ -51,7 +51,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
 <link rel="stylesheet/less" type="text/css" href="less/color.less">
   <link rel="stylesheet/less" type="text/css" href="less/fonts.less">
-<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js" ></script>
 
 
   <!-- MODERNIZR
@@ -114,15 +114,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <section class="container pad-intro pad-bottom">
-  <div class="">
-<!-- ABOUT TEXT -->
-
-        <div class="row">
-
-<iframe style="border:none;" width="100%" height="590" src="https://www.are.na/t/playhouse-memery/embed" title="Playhouse Memery”"></iframe>
-
-</div>
-
+  <div class="row" id="arena-container">
   </div>
 </section>   
 
@@ -150,15 +142,36 @@
 
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-   <script></script>
-
-
-  <script></script>
+     <!-- Create images from Are.na using an XMLHttpRequest -->
+    <script>
+      var xmlhttp = new XMLHttpRequest();
+      var baseUrl = "https://api.are.na/v2/channels/";
+      var channelName = 'playhouse-memery';
+      
+      xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              var myObj = JSON.parse(this.responseText);
+              myFunction(myObj);
+          }
+      };
+      xmlhttp.open("GET", baseUrl+channelName, true);
+      xmlhttp.send();
+      
+      function myFunction(arr) {
+          var out = "";
+          var i;
+          for(i = 0; i < arr.contents.length; i++) {
+            if (arr.contents[i].image){
+              out += '<div class="col-4"><img src="' + arr.contents[i].image.original.url + '"></img></div>';
+            }
+          }
+          document.getElementById("arena-container").innerHTML = out;
+      }
+    </script>
   <script src="javascripts/charming.min.js"></script>
   <script src="javascripts/anime.min.js"></script>
   <script src="javascripts/demo-tsula.js"></script>
   <script src="javascripts/libs/common.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="javascripts/custom/elements.js"></script>
 
 <script src="javascripts/custom/main.js"></script>
