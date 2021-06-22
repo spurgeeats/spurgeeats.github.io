@@ -17,7 +17,8 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/sexypasta.png.png" />
+  <link rel="icon" type="image/png" href="images/sexypasta.png" />
+
 
    <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -51,7 +52,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
 <link rel="stylesheet/less" type="text/css" href="less/color.less">
   <link rel="stylesheet/less" type="text/css" href="less/fonts.less">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
 
 
   <!-- MODERNIZR
@@ -63,7 +64,7 @@
 
 </head>
 
-<body class="greengrd">
+<body class="greengrd marbletexture">
 
 
   <!-- Preloader
@@ -77,15 +78,16 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <header class="masthead headerborder">
 
-    <div class="valign">
-        <div class="container-fluid">
-            <div class="row">
-                <a href="index.html" class="text-left menupad">eat me</a>
-                <a href="more.html" class="text-center menupad">add me</a>
-                <a href="about.html" class="text-right menupad">read me</a>
-            </div>   
+        <div class="valign">
+        <div class="container-fluid"> 
+            <div class="row menurules pad-top">
+                <a href="index.html" class="text-left menupad menuimg grow"><img src="images/plate.png"></a>
+                <a href="more.html" class="text-center menupad menuimg grow"><img src="images/notebook.png"></a>
+                <a href="about.html" class="text-right menupad menuimg grow"><img src="images/thought.png"></a>
+            </div>                
         </div>
     </div>
+
   </header>
 
 
@@ -114,8 +116,18 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <section class="container pad-intro pad-bottom">
+
+  <section>
+  <div class="projectpage">          
+    <div class="newborder container">
+      <section id="works-container" class="works-container works-masonry-container clearfix works-thumbnails-view pad-top font3">
+
   <div class="row" id="arena-container">
   </div>
+
+</section></div></div></section>
+
+
 </section>   
 
 
@@ -164,12 +176,12 @@
           for(i = 0; i < arr.contents.length; i++) {
             if (arr.contents[i].image){
               if(arr.contents[i].attachment) {
-                out += '<div class="col-4"><a href=' + arr.contents[i].attachment.url + '><img src="' + arr.contents[i].image.original.url + '"></img></a></div>';
+                out += '<div class="works-item chrome-fix works-item-one-half text-center"><a href=' + arr.contents[i].attachment.url + '><img class="b-lazy img-responsive imgshadow b-error" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
               }
               else if(arr.contents[i].source) {
-                out += '<div class="col-4"><a href=' + arr.contents[i].source.url + '><img src="' + arr.contents[i].image.original.url + '"></img></a></div>';
+                out += '<div class="works-item chrome-fix works-item-one-half text-center b-lazy img-responsive imgshadow b-error"><a href=' + arr.contents[i].source.url + '><img class="b-lazy img-responsive imgshadow b-error" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
               } else {
-                out += '<div class="col-4"><a href=' + arr.contents[i].image.original.url + '><img src="' + arr.contents[i].image.original.url + '"></img></a></div>';
+                out += '<div class="works-item chrome-fix works-item-one-half text-center b-lazy img-responsive imgshadow b-error"><a href=' + arr.contents[i].image.original.url + '><img class="b-lazy img-responsive imgshadow b-error" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
               }
             }
           }
