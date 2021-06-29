@@ -88,6 +88,23 @@
         </div>
     </div>
 
+                   <!--FILTERS -->
+        <section id="works-filter-panel" class="works-filter-panel">
+          <div class="valign">
+                <div class="works-filter-wrap">
+                    <ul class="works-filter text-center clearfix font2">
+
+                        <li><a id="all" href="#" data-filter="*" class="active"><span>all</span></a></li>
+                        <li><a href="#" data-filter=".byspurge"><span>by Spurge</span></a></li>
+                        <li><a href="#" data-filter=".byteah"><span>by Teah</span></a></li>
+                        <li><a href="#" data-filter=".shared"><span>shared</span></a></li>
+
+                    </ul>
+                </div>
+          </div>
+        </section> 
+        <!-- -->
+
   </header>
 
 
@@ -115,21 +132,68 @@
 <!-- MASTER CONTENT
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<section class="container pad-bottom">
 
-  <section>
+
+
+<section>
+  <div id="hidden-images">
+    <img onmouseover="hideElement('bloom')" hidden id="bloom" alt="" class="b-lazy leanright imgshadow supercede" src="images/funnyface.gif" data-src="images/work/bloom.jpeg" data-src-small="images/about_sm.jpg"/>
+
+    <img onmouseover="hideElement('cuttingmat')" hidden id="cuttingmat" alt="empty cutting mat" class="b-lazy leanleft supercede" src="images/funnyface.gif" data-src="images/work/cuttingmat.png" data-src-small="images/about_sm.jpg"/>
+
+
+  </div>
+</section>  
+
+
+<section>
   <div class="projectpage">          
-    <div class="newborder">
+    <div class="newborder container">
       <section id="works-container" class="works-container works-masonry-container clearfix works-thumbnails-view pad-top font3">
 
-  <div class="row" id="arena-container">
-  </div>
 
-</section></div></div></section>
+<!-- TEXT : works-item -->
+              <div class="works-item chrome-fix works-item-one-half shared">
+                    <article class="text-center worktext">
+                          <a href="cupnoodles.html" onmouseover="showElement('bloom')" onmouseout="hideElement('bloom')">cup noodles at cookies</a>
+                    </article>                    
+              </div>
+<!-- end : works-item -->
+
+<!-- TEXT : works-item -->
+              <div class="works-item chrome-fix works-item-one-half shared">
+                    <article class="text-center worktext">
+                          <a href="ethiopianplatter.html" onmouseover="showElement('cuttingmat')" onmouseout="hideElement('cuttingmat')">piassa ethiopian platter</a>
+                    </article>                    
+              </div>
+<!-- end : works-item -->
+
+<!-- TEXT : works-item -->
+              <div class="works-item chrome-fix works-item-one-half shared">
+                    <article class="text-center worktext">
+                          <a href="boeufbun.html" onmouseover="showElement('bloom')" onmouseout="hideElement('cuttingmat')">green monster burger</a>
+                    </article>                    
+              </div>
+<!-- end : works-item -->
+
+<!-- TEXT : works-item -->
+              <div class="works-item chrome-fix works-item-one-half">
+                    <article class="text-center worktext">
+                          <a href="recipe-x.html" onmouseover="showElement('cuttingmat')" onmouseout="hideElement('cuttingmat')">spinach-ricotta ravioli</a>
+                    </article>                    
+              </div>
+<!-- end : works-item -->
 
 
-</section>   
 
+
+
+              </section>
+          
+        </div>
+      </div>
+  </section>
+  <!-- end : mastwrap -->
 
 
 
@@ -138,6 +202,7 @@
   <footer class="mastfoot footerborder">
     <div class="valign">
         <div class="container-fluid container-footer"> 
+
                
             <div class="row text-center">
                 <a href="index.html" class="font3 menutitle">spurge eats</a>
@@ -150,50 +215,20 @@
 
 
 
-
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-     <!-- Create images from Are.na using an XMLHttpRequest -->
-    <script>
-      var xmlhttp = new XMLHttpRequest();
-      var baseUrl = "https://api.are.na/v2/channels/";
-      var channelName = 'playhouse-memery';
-      
-      xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-              var myObj = JSON.parse(this.responseText);
-              console.log(myObj);
-              myFunction(myObj);
-          }
-      };
-      xmlhttp.open("GET", baseUrl+channelName, true);
-      xmlhttp.send();
-      
-      function myFunction(arr) {
-          var out = "";
-          var i;
-          for(i = 0; i < arr.contents.length; i++) {
-            if (arr.contents[i].image){
-              if(arr.contents[i].attachment) {
-                out += '<div class="works-item chrome-fix works-item-one-third-spaced text-center"><a target="_blank" href=' + arr.contents[i].attachment.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
-              }
-              else if(arr.contents[i].source) {
-                out += '<div class="works-item chrome-fix works-item-one-third-spaced text-center"><a target="_blank" href=' + arr.contents[i].source.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
-              } else {
-                out += '<div class="works-item chrome-fix works-item-one-third-spaced text-center"><a target="_blank" href=' + arr.contents[i].image.original.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
-              }
-            }
-          }
-          document.getElementById("arena-container").innerHTML = out;
-      }
-    </script>
+   <script></script>
+
+
+  <script></script>
   <script src="javascripts/charming.min.js"></script>
   <script src="javascripts/anime.min.js"></script>
   <script src="javascripts/demo-tsula.js"></script>
   <script src="javascripts/libs/common.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="javascripts/custom/elements.js"></script>
 
 <script src="javascripts/custom/main.js"></script>
