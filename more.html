@@ -220,10 +220,47 @@
 
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<<<<<<< HEAD
    <script></script>
 
-
   <script></script>
+=======
+     <!-- Create images from Are.na using an XMLHttpRequest -->
+    <script>
+      var xmlhttp = new XMLHttpRequest();
+      var baseUrl = "https://api.are.na/v2/channels/";
+      var channelName = 'playhouse-memery';
+      
+      xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              var myObj = JSON.parse(this.responseText);
+              console.log(myObj);
+              myFunction(myObj);
+          }
+      };
+      xmlhttp.open("GET", baseUrl+channelName, false);
+      xmlhttp.setRequestHeader("Cache-Control", "no-cache, no-store, max-age=0");
+      xmlhttp.send();
+      
+      function myFunction(arr) {
+          var out = "";
+          var i;
+          for(i = 0; i < arr.contents.length; i++) {
+            if (arr.contents[i].image){
+              if(arr.contents[i].attachment) {
+                out += '<div class="works-item chrome-fix works-item-one-third-spaced text-center"><a target="_blank" href=' + arr.contents[i].attachment.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
+              }
+              else if(arr.contents[i].source) {
+                out += '<div class="works-item chrome-fix works-item-one-third-spaced text-center"><a target="_blank" href=' + arr.contents[i].source.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
+              } else {
+                out += '<div class="works-item chrome-fix works-item-one-third-spaced text-center"><a target="_blank" href=' + arr.contents[i].image.original.url + '><img class="b-lazy img-responsive imgshadow b-error bwhover" src="' + arr.contents[i].image.original.url + '"></img></a></div>';
+              }
+            }
+          }
+          document.getElementById("arena-container").innerHTML = out;
+      }
+    </script>
+>>>>>>> 241f4099b4fa969f1b86ae6a2123a81af514dbc7
   <script src="javascripts/charming.min.js"></script>
   <script src="javascripts/anime.min.js"></script>
   <script src="javascripts/demo-tsula.js"></script>
