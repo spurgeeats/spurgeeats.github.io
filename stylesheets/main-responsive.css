@@ -240,6 +240,15 @@ there.
         padding-right: 0.5em; */
         padding-top: 4em;
     }
+    .projectpage {
+    font-size: 40px;
+    }
+    body, p {
+        font-size: 14px;
+    }
+    .works-filter-panel {
+        margin-top: -50px;
+    }
 }
 
 
@@ -250,11 +259,6 @@ there.
         padding-top: 20px;
 
     }
-/*.newborder {
-    border-left-width: 10px;
-    border-right-width: 10px;
-}*/
-
 }
 
 
@@ -331,17 +335,6 @@ there.
 	    padding: 0 40px;
 	    text-align: left;
 	}
-/*    .menu-trigger p{
-    	display: none;
-    }
-    .welcome-text h1, .elements-counter .number, .news-post h1{
-        font-size: 24px !important;
-        line-height: 31px !important;
-    }
-    .agency-home-caption, .welcome-text h2, .news-post h2{
-        font-size: 20px !important;
-        line-height: 27px !important;
-    } */
     .about.bigletters {
         font-size: 26px;
     }
@@ -362,10 +355,6 @@ there.
       border: 20px solid;
       border-bottom: 0;
     }
-/*.newborder {
-    border-left-width: 4px;
-    border-right-width: 4px;
-}*/
 
 }
 

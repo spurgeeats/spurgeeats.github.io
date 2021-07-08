@@ -1015,12 +1015,12 @@ body.marbletexture {
 
 img.bwhover {
       filter: gray; /* IE5+ */
-      -webkit-filter: grayscale(0.8); /* Webkit Nightlies & Chrome Canary */
+      -webkit-filter: grayscale(0.7); /* Webkit Nightlies & Chrome Canary */
       -webkit-transition: all .3s ease-in-out;  
     }
 
 img.bwhover:hover {
     filter: none;
       -webkit-filter: grayscale(0);
-      -webkit-transform: scale(1.01);
+      -webkit-transform: scale(1.0);
     }
