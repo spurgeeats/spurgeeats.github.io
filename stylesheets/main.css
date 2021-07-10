@@ -1015,7 +1015,7 @@ body.marbletexture {
 
 img.bwhover {
       filter: gray; /* IE5+ */
-      -webkit-filter: grayscale(0.7); /* Webkit Nightlies & Chrome Canary */
+      -webkit-filter: grayscale(0.5); /* Webkit Nightlies & Chrome Canary */
       -webkit-transition: all .3s ease-in-out;  
     }
 
